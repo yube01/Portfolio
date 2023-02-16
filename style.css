@@ -84,9 +84,9 @@ header{
 }
 
 
-.aboutMe{
+.yube{
     background-color: #003329;
-    height: 100vh;
+    
     position: relative;
     padding: 1rem;
     z-index: 3;
@@ -101,6 +101,27 @@ header{
 }
 .aboutMe p{
     font-size: 1.5em
+}
+
+.projects{
+    margin-top: 2rem;
+}
+
+.projects h1{
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+
+.works{
+    display: flex;
+    gap: 2rem;
+}
+
+.work img{
+    height: 30rem;
+    width: 25rem;
+    object-fit:cover;
+    border-radius: 1rem;
 }
 
 
