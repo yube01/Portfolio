@@ -22,7 +22,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    padding: 1rem;
+    padding: 2rem;
     position: absolute;
     top: 0;
 
@@ -84,12 +84,23 @@ header{
 }
 
 
-.next{
+.aboutMe{
     background-color: #003329;
     height: 100vh;
     position: relative;
     padding: 1rem;
     z-index: 3;
+    color: white;
+    padding: 2rem;
+    
+}
+
+.aboutMe h1{
+    font-size: 3em;
+    margin-bottom: 1rem;
+}
+.aboutMe p{
+    font-size: 1.5em
 }
 
 
