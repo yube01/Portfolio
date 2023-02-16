@@ -1,4 +1,4 @@
-let text = document.getElementById("text");
+let text = document.getElementById("texts");
 let hill1 = document.getElementById("hill1");
 let hill2 = document.getElementById("hill2");
 let hill3 = document.getElementById("hill3");
@@ -18,5 +18,5 @@ window.addEventListener("scroll", ()=>{
     hill5.style.left = value * 1.5 + "px"
     hill4.style.left =value * -1.5 + "px"
     hill3.style.left = value*0.01 +"px"
-    // hill1.style.top = value * 1.5 + "px"
+    hill1.style.top = value * 1.5 + "px"
 })

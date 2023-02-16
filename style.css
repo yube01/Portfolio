@@ -1,9 +1,14 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Josefin+Sans:ital,wght@0,200;0,400;1,400&family=Rubik&family=Ubuntu:wght@300&family=Work+Sans&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 
@@ -28,7 +33,10 @@ header{
 
 .navigate a{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-size: 2rem;
+    z-index: 10;
+
     
 }
 
@@ -39,12 +47,26 @@ header{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 #text {
     font-size: 6rem;
     z-index: 1;
     color: white;
+    text-shadow: -3px 5px 21px rgba(6, 0, 0, 1);
+}
+
+#texts{
+    z-index: 1;
+    text-shadow: -3px 5px 21px rgba(6, 0, 0, 1);
+}
+
+#text1{
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+    
 }
 
 .parallax img{
@@ -69,3 +91,5 @@ header{
     padding: 1rem;
     z-index: 3;
 }
+
+
