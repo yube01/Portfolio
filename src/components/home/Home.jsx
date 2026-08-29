@@ -1,14 +1,16 @@
 import React from "react";
-import Image from "./Image";
 import Text from "./Text";
- 
+
 const Home = () => {
-	return (
-		<div  id="home" className="flex mb-16  gap-16 md:gap-2  pt-16 md:pt-0 md:items-center justify-between flex-col md:flex-row md:min-h-[70vh]">
-			<Text   />
-			<Image />
-		</div>
-	);
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+      {/* Background gradient orb */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--accent)] opacity-[0.04] rounded-full blur-[120px] pointer-events-none" />
+      <div className="relative z-10">
+        <Text />
+      </div>
+    </section>
+  );
 };
 
 export default Home;

@@ -6,15 +6,19 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer";
+import Particles from "./components/home/Particles";
 
 const App = () => {
   return (
-    <div className='min-w-screen font-["Rubik"] min-h-screen bg-black  cursor-default flex flex-col text-[#f1f5f9] py-4 px-4 lg:px-16  gap-4 md:gap-8  lg:gap-16 '>
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-['Inter'] cursor-default relative">
+      <Particles />
       <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <main className="max-w-7xl mx-auto px-6 md:px-8">
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
