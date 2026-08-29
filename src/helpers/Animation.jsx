@@ -1,29 +1,40 @@
-import {useEffect , useState, useRef} from "react"
+import { useEffect, useState, useRef } from "react";
 
-export default function Text({children, before, after, duration, moreclass}){
-		const animatedDivRef = useRef(null);
+export default function Animation({ children, className = "" }) {
+  const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
       },
-      { threshold: 0.5 } // Change this value as per your requirement
+      { threshold: 0.1 }
     );
 
-    if (animatedDivRef.current) {
-      observer.observe(animatedDivRef.current);
+    if (ref.current) {
+      observer.observe(ref.current);
     }
 
     return () => {
-      if (animatedDivRef.current) {
-        observer.unobserve(animatedDivRef.current);
+      if (ref.current) {
+        observer.unobserve(ref.current);
       }
     };
   }, []);
-	return (
-		<div ref={animatedDivRef} className={`${moreclass && moreclass} duration-[${duration}]  ${
-        isVisible ? after : before }`}>{children}</div>
-		);
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${
+        isVisible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-6"
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
 }

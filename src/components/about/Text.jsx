@@ -1,91 +1,106 @@
+import { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import {
-  SiHtml5,
-  SiCss3,
+  SiTypescript,
   SiJavascript,
   SiReact,
+  SiNextdotjs,
   SiNodedotjs,
-  SiPhp,
   SiExpress,
+  SiPython,
+  SiFastapi,
+  SiPostgresql,
   SiMongodb,
+  SiDocker,
   SiTailwindcss,
 } from "react-icons/si";
 import Animation from "../../helpers/Animation";
 
+const skills = [
+  { icon: SiReact, name: "React", color: "#61DAFB" },
+  { icon: SiNextdotjs, name: "Next.js", color: "#ffffff" },
+  { icon: SiTypescript, name: "TypeScript", color: "#3178C6" },
+  { icon: SiJavascript, name: "JavaScript", color: "#F7DF1E" },
+  { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
+  { icon: SiExpress, name: "Express", color: "#ffffff" },
+  { icon: SiPython, name: "Python", color: "#3776AB" },
+  { icon: SiFastapi, name: "FastAPI", color: "#009688" },
+  { icon: SiPostgresql, name: "PostgreSQL", color: "#4169E1" },
+  { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+  { icon: SiDocker, name: "Docker", color: "#2496ED" },
+  { icon: SiTailwindcss, name: "Tailwind", color: "#06B6D4" },
+];
+
 export default function Text() {
   return (
-    <div
-      className={`title  flex flex-col gap-4 md:gap-8 text-[1.1em] md:text-[1.4em] md:w-[60%] duration-[2s] 
-      }`}
-    >
-      <Animation
-        before="opacity-0 scale-[0.8]"
-        after="opacity-1 scale-[1]"
-        duration="2s"
-      >
-        <div className={` hover:-translate-y-2 duration-500`}>
-          <span className="text-[#d946ef] ">Coding </span> is fun. Isn't it ? 😉
-          <br />
-        </div>
-      </Animation>
-      <Animation
-        before="opacity-0 scale-[0.8]"
-        after="opacity-1 scale-[1]"
-        duration="2s"
-      >
-        <div className="hover:-translate-y-2 duration-500">
-          Well, I <span className="text-red-500 ">❤️</span> it anyways. My field
-          of Interest's are building new{" "}
-          <span className="text-[#d946ef] ">
-            Web Technologies and Web Scraping.
-          </span>{" "}
-        </div>
-      </Animation>
+    <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+      {/* Left — text */}
+      <div className="md:w-3/5 space-y-5">
+        <Animation>
+          <p className="text-[var(--text-secondary)] leading-relaxed">
+            I love building things for the web. My field of interest lies in creating modern{" "}
+            <span className="text-[var(--text-primary)] font-medium">web applications</span> and
+            exploring <span className="text-[var(--text-primary)] font-medium">web scraping</span> techniques.
+          </p>
+        </Animation>
 
-      <Animation
-        before="opacity-0 scale-[0.8]"
-        after="opacity-1 scale-[1]"
-        duration="2s"
-      >
-        <div className="hover:-translate-y-2 duration-500">
-          Whenever possible, I apply my passion for developing products with
-          Modern Javascript Library and Frameworks like
-          <span className="text-[#d946ef] "> React.js</span> and{" "}
-          <span className="text-[#d946ef] ">Next.js</span>.
-        </div>
-      </Animation>
-      <Animation
-        before="opacity-0 scale-[0.8]"
-        after="opacity-1 scale-[1]"
-        duration="2s"
-      >
-        <div className="text-blue flex justify-between hover:translate-x-[10px] hover:text-[#6d28d9] duration-500 items-center w-full">
-          <SiHtml5 className="h-5 w-5 inline" />
-          <SiCss3 className="h-5 w-5 inline" />{" "}
-          <SiJavascript className="h-5 w-5 inline" />
-          <SiReact className="h-5 w-5 inline" />
-          <SiNodedotjs className="h-5 w-5 inline" />{" "}
-          <SiMongodb className="h-5 w-5 inline" />
-          <SiExpress className="h-5 w-5 inline" />
-          <SiTailwindcss className="h-5 w-5 inline" />
-          <SiPhp className="h-5 w-5 inline" />
-        </div>
-      </Animation>
+        <Animation>
+          <p className="text-[var(--text-secondary)] leading-relaxed">
+            I work with modern JavaScript frameworks like{" "}
+            <span className="text-[var(--accent)]">React.js</span> and{" "}
+            <span className="text-[var(--accent)]">Next.js</span> to build
+            performant, user-friendly experiences.
+          </p>
+        </Animation>
 
-      <Animation
-        before="opacity-0 scale-[0.8]"
-        after="opacity-1 scale-[1]"
-        duration="2s"
-      >
-        <div className="flex my-4 w-full justify-around items-center">
-          <a href="/assets/pdf/Cv.pdf" target="_blank">
-            <div className="flex items-center gap-2 md:gap-4  p-2 border rounded-lg hover:bg-[#6d28d9] duration-500 hover:scale-[1.1] ">
-              <FiDownload className="w-5 h-5 " />
-              <span>DOWNNLOAD CV</span>
-            </div>
+        <Animation>
+          <a
+            href="/assets/pdf/yubraj_adhikari.pdf"
+            target="_blank"
+            className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 border border-[var(--border-subtle)] hover:border-[var(--accent)] text-[var(--text-secondary)] hover:text-[var(--accent)] text-sm font-medium rounded-lg transition-all duration-300 hover:-translate-y-0.5 group"
+          >
+            <FiDownload className="w-4 h-4 group-hover:animate-bounce" />
+            Download CV
           </a>
-        </div>
-      </Animation>
+        </Animation>
+      </div>
+
+      {/* Right — skills */}
+      <div className="md:w-2/5">
+        <Animation>
+          <p className="text-xs uppercase tracking-widest text-[var(--text-muted)] mb-4">
+            Technologies
+          </p>
+          <div className="grid grid-cols-2 gap-3">
+            {skills.map((skill) => (
+              <SkillCard key={skill.name} skill={skill} />
+            ))}
+          </div>
+        </Animation>
+      </div>
+    </div>
+  );
+}
+
+function SkillCard({ skill }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="glass flex items-center gap-3 px-4 py-3 rounded-lg hover:border-[var(--border-hover)] transition-all duration-300 cursor-default"
+    >
+      <skill.icon
+        className="w-4 h-4 transition-colors duration-300"
+        style={{ color: hovered ? skill.color : "var(--text-muted)" }}
+      />
+      <span
+        className="text-sm transition-colors duration-300"
+        style={{ color: hovered ? "var(--text-primary)" : "var(--text-secondary)" }}
+      >
+        {skill.name}
+      </span>
     </div>
   );
 }

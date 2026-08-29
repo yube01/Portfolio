@@ -1,9 +1,7 @@
 export default function Layout({ children, id }) {
-	return (
-		<div className="flex w-full items-center justify-center min-h-screen" id={id}>
-			<div className="flex flex-col gap-8 items-center justify-center w-full">
-				{children}
-			</div>
-		</div>
-	);
+  return (
+    <section id={id} className="py-20 md:py-28">
+      {children}
+    </section>
+  );
 }
