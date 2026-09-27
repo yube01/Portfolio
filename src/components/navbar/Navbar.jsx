@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
+import { FiExternalLink } from "react-icons/fi";
 
 const navLinks = [
   { text: "Home", id: "#home" },
@@ -44,6 +45,15 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-[var(--accent)] group-hover:w-full transition-all duration-300" />
             </button>
           ))}
+          <a
+            href="https://blog.adhikariyubraj.com.np/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium px-3.5 py-1.5 rounded-md bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/20 transition-all duration-300"
+          >
+            Blog
+            <FiExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -71,6 +81,16 @@ const Navbar = () => {
               {link.text}
             </button>
           ))}
+          <a
+            href="https://blog.adhikariyubraj.com.np/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="text-left py-3 text-[var(--accent)] hover:pl-2 transition-all duration-300 flex items-center gap-1.5 font-medium"
+          >
+            Blog
+            <FiExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     </nav>

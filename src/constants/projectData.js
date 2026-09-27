@@ -12,6 +12,31 @@ export const projectData = [
     ],
   },
   {
+    title: "Personal Blog",
+    desc: "A personal blog sharing tech insights, tutorials and development experiences",
+    hostURL: "https://blog.adhikariyubraj.com.np/",
+    gitURL: "https://github.com/yube01",
+    cover: "blog.png",
+    learned: [
+      "Building and deploying a content-driven blog platform",
+      "Writing and publishing technical articles for developers",
+      "SEO optimization and readership growth strategies",
+    ],
+  },
+  {
+    title: "Rapid Routes System",
+    desc: "A smart public transport route planning system — Sasto Yatra",
+    hostURL: "https://rapid-routes-system-sasto-yatra.vercel.app/",
+    gitURL: "https://github.com/yube01",
+    cover: "rapid-route.png",
+    learned: [
+      "Designing efficient route-finding algorithms for transit networks",
+      "Automating route suggestions based on user preferences and constraints",
+      "Optimizing user flows for public transport search and planning",
+    ],
+  },
+
+  {
     title: "Bug Prediction System",
     desc: "Machine learning system for software defect prediction and analysis",
     hostURL: "https://bug-prediction-system.vercel.app/",
@@ -60,4 +85,3 @@ export const projectData = [
     ],
   },
 ];
-
